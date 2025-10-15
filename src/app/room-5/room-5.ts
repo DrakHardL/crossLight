@@ -4,10 +4,10 @@ import { Room5Case } from './room-5-case/room-5-case';
 import { Room5Shelf } from './room-5-shelf/room5-shelf';
 
 enum Props {
-  ROOM5_CASE = "une caisse",
-  ROOM5_BED = "lit pas fou",
-  ROOM5_SHELF = "étagère miraculeuse",
-  ROOM5_RUBBLE = "gravas",
+  ROOM5_CASE = "la vielle caisse en bois",
+  ROOM5_BED = "le lit de camp",
+  ROOM5_SHELF = "l'étagère bancale",
+  ROOM5_RUBBLE = "l'amoncellement de gravats",
 };
 
 @Component({

@@ -12,17 +12,15 @@
 
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Inspecter ?
+    Inspecter :
   </button>
   <ul class="dropdown-menu">
     @for (item of props; track $index) {
-      <li><a class="dropdown-item" (click)="inspect(item)">{{ item }}</a></li>
+      <li><a class="dropdown-item" [style.cursor]="'pointer'" (click)="inspect(item)">{{ item }}</a></li>
     }
   </ul>
 </div>
 
-<ng-container #inspected_props_element></ng-container>
+<hr>
 
-@if (inspected_props) {
-  {{inspected_props}}
-}
+<ng-container #inspected_props_element></ng-container>
