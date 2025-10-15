@@ -1,0 +1,28 @@
+<h2>La cellule</h2>
+
+<p>
+  La cellule, à moitié en ruine, exhale une odeur de poussière et d'humidité. Les murs, fissurés et noircis par le
+  temps, semblent sur le point de s'effondrer. Dans la pénombre, tu distingues les formes incertaines d'un lit de camp
+  à la toile déchirée, d'une vieille caisse en bois posée dans un coin, et d'une étagère bancale qui tient encore au
+  mur par miracle. Sur la gauche, un amoncellement de gravats obstrue une partie de la pièce, formant une barrière de
+  pierres et de poutres effondrées. Quelques rais de lumière filtrent à travers les interstices, projetant sur le sol
+  des éclats pâles qui dansent dans la poussière en suspension. Le silence, seulement troublé par le goutte-à-goutte
+  régulier d'une fuite invisible, donne à l'endroit une atmosphère oppressante, presque funèbre.
+</p>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    InspEcter ?
+  </button>
+  <ul class="dropdown-menu">
+    @for (item of props; track $index) {
+      <li><a class="dropdown-item" (click)="inspect(item)">{{ item }}</a></li>
+    }
+  </ul>
+</div>
+
+<ng-container #inspected_props_element></ng-container>
+
+@if (inspected_props) {
+  {{inspected_props}}
+}
