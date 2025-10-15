@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class Room5Case {
 
+  tryOpenLocker(code: string, right_code: string = '1312') {
+    console.log(code, "locker try :!");
+    if (code == right_code) {
+      console.log("locker open !!!");
+    }
+  }
 }

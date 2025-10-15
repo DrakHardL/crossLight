@@ -8,3 +8,8 @@
     De l'intérieur semble émaner une odeur sourde de bois pourri et de métal oxydé, comme si quelque chose y dormait,
     oublié depuis longtemps.
 </p>
+
+<div class="input-group mb-3">
+  <input #npt type="text" class="form-control" type="number">
+  <button class="btn btn-outline-secondary" type="button" (click)="tryOpenLocker(npt.value)">Ouvrir</button>
+</div>
