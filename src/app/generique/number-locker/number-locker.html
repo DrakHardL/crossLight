@@ -1,0 +1,5 @@
+<h3>{{ label }}</h3>
+<div class="input-group mb-3">
+    <input #npt type="text" class="form-control" type="number" [min]="range.min" [max]="range.max">
+    <button class="btn btn-outline-secondary" type="button" (click)="tryOpenLocker(npt.value)">Ouvrir</button>
+</div>

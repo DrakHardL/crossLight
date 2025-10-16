@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
+import { NumberLocker } from '@generique/number-locker/number-locker';
 
 @Component({
   selector: 'app-room-5-case',
-  imports: [],
+  imports: [NumberLocker],
   templateUrl: './room-5-case.html',
   styleUrl: './room-5-case.css'
 })
 export class Room5Case {
+  protected open: boolean = false;
 
-  tryOpenLocker(code: string, right_code: string = '1312') {
-    console.log(code, "locker try :!");
-    if (code == right_code) {
-      console.log("locker open !!!");
-    }
+  lockerOpened() {
+    this.open = true;
   }
 }

@@ -1,15 +1,23 @@
 <p>
-    Dans le coin droit de la cellule repose une vieille caisse en bois, rongée par le temps et l'humidité. Ses planches,
-    noircies et gonflées, se sont légèrement disjointes, laissant entrevoir l'obscurité de son contenu. Sur son côté, un
-    petit cadenas à combinaison de trois chiffres est fixé à un anneau de fer rouillé. Les chiffres, à moitié effacés,
-    sont couverts d'une fine pellicule de poussière, mais on distingue encore les rainures du métal terni. Le mécanisme
-    semble ancien — fragile peut-être, mais toujours fonctionnel.
-    Autour de la caisse, la poussière forme un cercle immobile, preuve qu'elle n'a pas été déplacée depuis des années.
-    De l'intérieur semble émaner une odeur sourde de bois pourri et de métal oxydé, comme si quelque chose y dormait,
-    oublié depuis longtemps.
+  Dans le coin droit de la cellule repose une vieille caisse en bois, rongée par le temps et l'humidité. Ses planches,
+  noircies et gonflées, se sont légèrement disjointes, laissant entrevoir l'obscurité de son contenu. Sur son côté, un
+  petit cadenas à combinaison de quatres chiffres est fixé à un anneau de fer rouillé. Les chiffres, à moitié effacés,
+  sont couverts d'une fine pellicule de poussière, mais on distingue encore les rainures du métal terni. Le mécanisme
+  semble ancien — fragile peut-être, mais toujours fonctionnel.
+  Autour de la caisse, la poussière forme un cercle immobile, preuve qu'elle n'a pas été déplacée depuis des années.
+  De l'intérieur semble émaner une odeur sourde de bois pourri et de métal oxydé, comme si quelque chose y dormait,
+  oublié depuis longtemps.
 </p>
 
-<div class="input-group mb-3">
-  <input #npt type="text" class="form-control" type="number">
-  <button class="btn btn-outline-secondary" type="button" (click)="tryOpenLocker(npt.value)">Ouvrir</button>
-</div>
+@if (!open) {
+  <app-number-locker [range]="{min:0, max: 9999}" label="Un verrous a quatre chiffres :" solution="1412"
+    (open)="lockerOpened()"></app-number-locker>
+} @else {
+  <p>
+    Le couvercle s'ouvre avec difficulté, révélant un intérieur étonnamment bien préservé. Une étoffe sombre recouvre
+    plusieurs objets soigneusement disposés : un petit coffret en métal décoré de symboles gravés, une boussole ancienne
+    dont l'aiguille tremble faiblement, et un cylindre de verre scellé contenant un parchemin roulé. Un léger parfum de
+    cire et de cuir flotte dans l'air. Sur le couvercle intérieur, on distingue une inscription à moitié effacée : “Ne
+    l'ouvre que si tu connais la combinaison.”
+  </p>
+}
